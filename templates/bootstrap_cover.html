@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="hillsbarberApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,10 +16,12 @@
 
     <!-- Custom styles for this template -->
     <link href="static/cover.css" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <!--    <script src="static/script.js"></script> -->
   </head>
 
-  <body>
+  <body ng-controller="mainController">
 
     <div class="site-wrapper">
 
@@ -33,17 +35,20 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Rates</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="/rates">Rates</a></li>
+                  <li><a href="#contact">Contact</a></li>
                 </ul>
               </nav>
             </div>
           </div>
 
+          <div ng-view></div>
+          
           <div class="inner cover">
-            <h1 class="cover-heading">Good old-fashioned haircut.</h1>
+            <h1 class="cover-heading"> {{ message }} Good old-fashioned haircut.</h1>
             <p class="lead">Hill's barbershop brings you what you need: a sharp, stylish men's haircut. No non-sense.</p>
             <p class="lead">
+            <p> message is {{message}}</p>
               <a href="#" class="btn btn-lg btn-default">Reserve now</a>
             </p>
           </div>
@@ -64,9 +69,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Commenting this out
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        -->
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    -->
   </body>
 </html>
 
