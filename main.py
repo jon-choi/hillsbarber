@@ -10,8 +10,8 @@ app.config['DEBUG'] = True
 
 def hello(name=None):
     """Return a friendly HTTP greeting."""
-    return render_template('bootstrap_cover.html', name=name)
-#    return render_template('starter_template.html', name=name)
+    return render_template('template.html', name=name)
+#    return render_template('bootstrap_cover.html', name=name)
 
 @app.route('/rates')
 def helloRates(name='rates'):
