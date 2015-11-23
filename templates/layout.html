@@ -19,7 +19,7 @@
     <link href="static/cover.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-    <!--    <script src="static/script.js"></script> -->
+    <script src="static/script.js"></script> 
   </head>
 
   <body ng-controller="mainController">
@@ -36,7 +36,7 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="/rates">Rates</a></li>
+                  <li><a href="#rates">Rates</a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
               </nav>
@@ -48,9 +48,13 @@
           <!--Content is dynamically populated here using Jinja-->
           <div class="inner cover">
               {% block content %}{% endblock %}
-              {{ text }}
+              this jinja text be {{ text }}
+              <br>
+              this customized angular message be [[ message ]]
           </div>
 
+          <p>ng-view loading below here:</p>
+          <div ng-view></div>
           <div class="mastfoot">
             <div class="inner">
               <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>

@@ -2,7 +2,12 @@
 
 var hillsbarberApp = angular.module('hillsbarberApp', ['ngRoute']);
 
+hillsbarberApp.config(function($interpolateProvider){
+    $interpolateProvider.startSymbol('[[');
+    $interpolateProvider.endSymbol(']]');
+});
 // configure our routes
+
 hillsbarberApp.config(function($routeProvider) {
     $routeProvider
 
@@ -13,8 +18,8 @@ hillsbarberApp.config(function($routeProvider) {
         })
 
         // route for rates
-        .when('/rates', {
-            templateUrl : 'rates.html',
+        .when('/#/rates', {
+            templateUrl : '../static/partials/rates.html',
             controller  : 'ratesController'
         })
 
