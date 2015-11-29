@@ -44,15 +44,17 @@
           </div>
 
           <!--Content is dynamically populated here using Jinja-->
+          {% block content %}{% endblock %}
+          <!--
           <div class="inner cover">
-              {% block content %}{% endblock %}
               this jinja text be {{ text }}
               <br>
               this customized angular message be [[ message ]]
           </div>
+          --> 
 
-          <p>ng-view loading below here:</p>
           <div ng-view></div>
+
           <div class="mastfoot">
             <div class="inner">
               <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
