@@ -28,6 +28,12 @@ hillsbarberApp.config(function($routeProvider) {
         .when('/contact', {
             templateUrl : '../static/partials/contact.html',
             controller  : 'contactController'
+        })
+
+        // routes for calendar 
+        .when('/calendar', {
+            templateUrl : '../static/partials/calendar.html',
+            controller  : 'calendarController'
         });
 });
 
@@ -46,4 +52,7 @@ hillsbarberApp.controller('contactController', function($scope) {
     $scope.message = 'check out these numbers!';
 });
 
-console.log('this be working');
+hillsbarberApp.controller('calendarController', function($scope) {
+
+    $scope.message = 'check out these dates!';
+});
