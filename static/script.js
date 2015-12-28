@@ -40,6 +40,10 @@ hillsbarberApp.config(function($routeProvider) {
 hillsbarberApp.controller('mainController', function($scope) {
 
     $scope.message = 'check out this main haircut!';
+    // $scope.isActive = function (viewLocation)
+    //     var active = (viewLocation === $location.path());
+    //     return active;
+    // };
 });
 
 hillsbarberApp.controller('ratesController', function($scope) {
@@ -56,3 +60,4 @@ hillsbarberApp.controller('calendarController', function($scope) {
 
     $scope.message = 'check out these dates!';
 });
+
