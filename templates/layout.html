@@ -20,6 +20,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
     <script src="static/script.js"></script> 
+    <script>(function() { var s = document.createElement("script");s.async = true;s.onload = s.onreadystatechange = function(){getYelpWidget("hills-barbershop-redmond","300","RED","y","y","1");};s.src='http://chrisawren.com/widgets/yelp/yelpv2.js' ;var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x); })();</script>
   </head>
 
   <body ng-controller="mainController">
@@ -35,10 +36,10 @@
               <h3 class="masthead-brand">Hill's Barbershop</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li ng-class="{ active: isActive('rates') }"><a href="#rates">Rates</a></li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#rates">Rates</a></li>
+                  <li><a href="#calendar">Hours & Calendar</a></li>
                   <li><a href="#contact">Contact</a></li>
-                  <li><a href="#calendar">Hours</a></li>
                 </ul>
               </nav>
             </div>
@@ -57,9 +58,6 @@
           <div ng-view></div>
 
           <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
           </div>
 
         </div>

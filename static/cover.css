@@ -121,6 +121,18 @@ body {
 
 
 /*
+ * Custom
+ */
+.yelpwidget {
+  background-color: #fff;
+  color: black;
+  width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  text-shadow: none;
+}
+
+/*
  * Footer
  */
 

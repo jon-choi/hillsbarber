@@ -1,5 +1,6 @@
 // script.js
-/*
+// is angular working?
+
 'use strict';
 
 var hillsbarberApp = angular.module('hillsbarberApp', ['ngRoute'], (function($interpolateProvider) {
@@ -26,4 +27,3 @@ hillsbarberApp.config(['$routeProvider',
             });
         }
 ]);
-*/
